@@ -25,7 +25,7 @@ export default function App() {
           <Routes>
 
             {/* Products asosiy sahifa */}
-            <Route path="/" element={<Products />} />
+            <Route path="/products" element={<Products />} />
 
             <Route path="/about" element={<About />} />
 
