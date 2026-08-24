@@ -7,6 +7,7 @@ import {
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import BottomTransition from "./components/BottomTransition";
 
 import Products from "./pages/Products.jsx";
 import About from "./pages/About";
