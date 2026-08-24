@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-const About = () => {
+function Advantages() {
   return (
-    <div className="font-sans text-gray-800 bg-white">
+      <div className="font-sans text-gray-800 bg-white">
       {/* Header */}
       <header className="border-b border-gray-200 sticky top-0 bg-white z-50">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
@@ -190,7 +190,7 @@ const About = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default Advantages
