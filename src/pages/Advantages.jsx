@@ -1,227 +1,195 @@
 import React from 'react'
-import begovayaImg from '../assets/begovaya.png'
-import tyanki from '../assets/tyanki.png'
-import mujiki from '../assets/mujiki.png'
-import tip from '../assets/tip.png'
-import bgImage from '../assets/tipi.png'
-import ded from '../assets/ded.png'
-import dor from '../assets/dorojka.png'
-import tyanka from '../assets/tyanka.png'
-import ruka from '../assets/ruka.png'
-
-// Оставляем пустым, подставишь свой путь
 
 function Advantages() {
   return (
-    <section className="w-full">
-      {/* Голубая шапка */}
-      <div className="bg-[#00a6e3] text-white py-16 px-4 text-center">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
-          <span className="text-[#ffe600] text-sm font-bold uppercase tracking-wider">
-            НАШИ ПРЕИМУЩЕСТВА
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold uppercase tracking-wide">
-            ПРЕИМУЩЕСТВА TRUE FITNESS
-          </h2>
-          <p className="text-sm md:text-base font-semibold uppercase tracking-wider max-w-3xl leading-relaxed">
-            БЛАГОДАРЯ КОТОРЫМ МЫ ЯВЛЯЕМСЯ МИРОВЫМ ЛИДЕРОМ В ПРОИЗВОДСТВЕ ФИТНЕС-ОБОРУДОВАНИЯ
-          </p>
+      <div className="font-sans text-gray-800 bg-white">
+      {/* Header */}
+      <header className="border-b border-gray-200 sticky top-0 bg-white z-50">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-3xl font-extrabold tracking-tighter text-cyan-600">
+              ▲ TRUE®
+            </span>
+          </div>
+
+          <nav className="hidden md:flex space-x-6 text-xs font-semibold uppercase tracking-wider text-gray-600">
+            <a href="#about" className="hover:text-cyan-600">О бренде</a>
+            <a href="#products" className="hover:text-cyan-600">Продукция</a>
+            <a href="#advantages" className="hover:text-cyan-600">Преимущества</a>
+            <a href="#buy" className="hover:text-cyan-600">Открыть клуб</a>
+            <a href="#contacts" className="hover:text-cyan-600">Контакты</a>
+          </nav>
+
+          <div className="flex items-center space-x-4">
+            <span className="text-xs text-gray-500 font-medium">+7 (495) 000-00-00</span>
+            <button className="bg-cyan-500 hover:bg-cyan-600 text-white text-xs font-semibold px-4 py-2 uppercase rounded-sm">
+              Оставить заявку
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      {/* Сетка карточек */}
-      <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col gap-12">
-        
-        {/* Первые 4 карточки */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Main Hero Section */}
+      <section id="about" className="relative bg-cyan-500 pt-10 pb-16 px-4">
+        <h1 className="text-center text-white text-2xl md:text-3xl font-extrabold uppercase tracking-wide mb-8">
+          TRUE — Совершенное фитнес-оборудование
+        </h1>
 
-          {/* Карточка 1 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${begovayaImg})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              ЛУЧШИЕ ХАРАКТЕРИСТИКИ В КЛАССЕ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Наши тренажеры имеют самые совершенные характеристики в классе, от более мощных технических показателей до расширенных функциональных возможностей
-            </p>
-          </div>
+        <div className="max-w-5xl mx-auto relative rounded-md overflow-hidden shadow-lg">
+          {/* Background Gym Image */}
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+            alt="Gym Background"
+            className="w-full h-[500px] object-cover"
+          />
 
-          {/* Карточка 2 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${tyanki})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              ВЫСОКАЯ НАДЕЖНОСТЬ ОБОРУДОВАНИЯ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Высокое Качество Тренажеров - Это Визитная Карточка TRUE. Кроме Того, TRUE Предоставляет До 5 Лет Полной Гарантии На Кардио Тренажеры.
-            </p>
-          </div>
-
-          {/* Карточка 3 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${mujiki})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              НИЗКАЯ СТОИМОСТЬ ВЛАДЕНИЯ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Тренажеры Способны Выдерживать Серьезную Эксплуатационную Нагрузку, Сохраняя Минимальные Затраты На Сервис, Что Обеспечивает Минимальную Стоимость Владения
-            </p>
-          </div>
-
-          {/* Карточка 4 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${tip})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              КАЧЕСТВЕННЫЙ И ОПЕРАТИВНЫЙ СЕРВИС
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Оборудование Должно Работать Бесперебойно, Поэтому Мы Уделяем Особое Внимание Наличию Всех Необходимых Запчастей И Высокой Срочности Технического Реагирования
-            </p>
-          </div>
-
-        </div>
-
-        {/* Вторые 4 карточки */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-          {/* Карточка 5 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${ded})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              ЦЕНЫ НИЖЕ, ЧЕМ У АНАЛОГОВ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Стоимость Тренажеров Вас Приятно Удивит. Несмотря На То, Что Мы Полностью Превосходим Конкурентов, Наши Цены Ниже
-            </p>
-          </div>
-
-          {/* Карточка 6 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${dor})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              СОВЕРШЕННАЯ ПРОИЗВОДИТЕЛЬНОСТЬ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Тренажеры TRUE Обеспечивают Непревзойденный Уровень Тренировок, Для Достижения Самых Высоких Результатов.
-            </p>
-          </div>
-
-          {/* Карточка 7 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${tyanka})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              АБСОЛЮТНЫЕ ЛИДЕРЫ ПО КОЛИЧЕСТВУ ИННОВАЦИЙ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Наши тренажеры имеют самые совершенные характеристики в классе, от более мощных технических показателей до расширенных функциональных возможностей
-            </p>
-          </div>
-
-          {/* Карточка 8 */}
-          <div className="flex flex-col items-center text-center">
-            <div 
-              className="w-full aspect-[4/3] bg-gray-100 mb-4 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${ruka})` }}
-            />
-            <h3 className="text-[#00a6e3] font-bold text-lg md:text-xl uppercase mb-3 leading-snug px-2">
-              МАКСИМАЛЬНОЕ УДОБСТВО И ФУНКЦИОНАЛЬНОСТЬ
-            </h3>
-            <p className="text-gray-600 text-xs md:text-sm leading-relaxed px-2">
-              Компания TRUE Продумывает Все Технические Нюансы И Делает Тренажеры Максимально Удобными И Функциональными
-            </p>
-          </div>
-
-        </div>
-
-        {/* Баннер TOP 5 под карточками */}
-        <div className="mt-8 border border-sky-200 relative pt-10 pb-8 px-6 text-center">
-          {/* Плашка TOP 5 по центру верхней линии */}
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00a6e3] text-white px-8 py-1 font-bold text-sm tracking-wider uppercase">
-            TOP 5
-          </div>
-          <h3 className="text-gray-800 font-bold text-base sm:text-xl md:text-2xl uppercase leading-relaxed max-w-4xl mx-auto">
-            БРЕНД TRUE FITNESS ВХОДИТ В ТОП 5 КРУПНЕЙШИХ ПРОИЗВОДИТЕЛЕЙ ФИТНЕС ОБОРУДОВАНИЯ
-          </h3>
-        </div>
-
-      </div>
-
-      {/* Форма с фоновой картинкой (под баннером) */}
-      <div 
-        className="w-full bg-cover bg-center bg-no-repeat py-12 md:py-20 px-4"
-        style={{ backgroundImage: `url(${bgImage})` }}
-      >
-        <div className="max-w-6xl mx-auto bg-black/65 backdrop-blur-xs p-6 md:p-12 text-center text-white border border-white/10 shadow-2xl">
-          <span className="text-[#ffe600] text-xs md:text-sm font-bold uppercase tracking-widest block mb-4">
-            TRUE FITNESS
-          </span>
-
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-tight max-w-4xl mx-auto tracking-wide mb-4">
-            ПОЛУЧИТЕ <span className="text-[#00a6e3]">ЭКСКЛЮЗИВНОЕ ПРЕДЛОЖЕНИЕ</span> НА ТРЕНАЖЕРЫ <span className="text-[#00a6e3]">TRUE FITNESS</span>
-          </h2>
-
-          <p className="text-[#ffe600] text-xs sm:text-sm md:text-base font-bold uppercase tracking-wider mb-8 max-w-3xl mx-auto">
-            МЫ БУДЕМ РАДЫ ПРОКОНСУЛЬТИРОВАТЬ ВАС И ПОМОЧЬ С ПОДБОРОМ ОБОРУДОВАНИЯ
-          </p>
-
-          <form className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto mb-6" onSubmit={(e) => e.preventDefault()}>
-            <input 
-              type="text" 
-              placeholder="ИМЯ" 
-              className="bg-[#dcdcdc] text-black placeholder-gray-600 font-bold px-4 py-3 text-sm focus:outline-none uppercase w-full"
-            />
-
-            <div className="flex items-center bg-[#dcdcdc] px-3 py-3 w-full">
-              <span className="mr-2 text-lg">🇺🇿</span>
-              <span className="text-black font-bold mr-2 text-sm">▾</span>
-              <input 
-                type="tel" 
-                defaultValue="+998 (99)-999-99-99"
-                className="bg-transparent text-black font-bold text-sm focus:outline-none w-full"
-              />
+          {/* Overlay Box */}
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <div className="bg-white/95 backdrop-blur-sm p-6 md:p-10 max-w-2xl text-center shadow-2xl rounded-sm">
+              <p className="text-cyan-600 text-xs md:text-sm mb-4 leading-relaxed font-medium">
+                Это совершенство обеспечивается высококачественными, долговечными материалами и технологиями, которые мы используем для производства наших машин. Но они также создаются благодаря нашей страсти к инновациям и их потребностям.
+              </p>
+              <p className="text-gray-600 text-xs md:text-sm mb-4 leading-relaxed">
+                Наша опытная команда предлагает комплексное обслуживание, начиная от планирования объекта до технического обслуживания и оснащения клуба самыми новейшими технологиями. Делясь вашим надежным партнером, мы делаем все возможное, чтобы ваше предприятие продолжало эффективно работать годы и годы.
+              </p>
+              <p className="text-gray-600 text-xs md:text-sm mb-6 leading-relaxed">
+                Вы можете рассчитывать на нас в предоставлении одних из лучших услуг в отрасли. Мы ориентированы на оптимизацию срока службы вашего фитнес-оборудования...
+              </p>
+              <p className="text-cyan-600 font-semibold text-xs md:text-sm cursor-pointer hover:underline">
+                Свяжитесь с нами, чтобы узнать, как партнерство с TRUE может помочь вашей компании добиться успеха.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <input 
-              type="email" 
-              placeholder="E-MAIL" 
-              className="bg-[#dcdcdc] text-black placeholder-gray-600 font-bold px-4 py-3 text-sm focus:outline-none uppercase w-full"
+      {/* Product Innovations Section */}
+      <section id="products" className="bg-cyan-500 py-12 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-center text-white text-2xl md:text-3xl font-extrabold uppercase tracking-wide mb-10">
+            Наши инновации
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { title: 'Тренажер лестница TRUE Palisade', img: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=400&q=80' },
+              { title: 'Функциональный тренинг с Composite Strength', img: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=400&q=80' },
+              { title: 'Рамы для стретчинга TRUE Stretch', img: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80' },
+              { title: 'Латеральный тренажер TRUE Traverse', img: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&q=80' },
+              { title: 'Беговая дорожка TRUE Alpine Runner', img: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&q=80' },
+              { title: 'Эллиптический тренажер TRUE Spectrum', img: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=400&q=80' },
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded overflow-hidden shadow hover:shadow-lg transition">
+                <img src={item.img} alt={item.title} className="w-full h-48 object-cover" />
+                <div className="p-4 text-center">
+                  <h3 className="text-xs font-bold uppercase text-gray-800 leading-snug">
+                    {item.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA / Form Section */}
+      <section className="relative bg-gray-900 text-white py-16 px-4">
+        <img
+          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+          alt="Gym Background CTA"
+          className="absolute inset-0 w-full h-full object-cover opacity-20"
+        />
+
+        <div className="relative max-w-4xl mx-auto text-center">
+          <h2 className="text-xl md:text-3xl font-extrabold uppercase tracking-wide mb-2">
+            Получите эксклюзивное предложение на тренажеры TRUE Fitness
+          </h2>
+          <p className="text-xs text-gray-300 mb-8 uppercase tracking-wider">
+            Наш менеджер проконсультирует вас и поможет подобрать оборудование
+          </p>
+
+          <form className="grid grid-cols-1 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
+            <input
+              type="text"
+              placeholder="Имя"
+              className="px-4 py-3 bg-white text-gray-800 text-xs rounded focus:outline-none"
             />
-
-            <button 
-              type="submit" 
-              className="bg-[#00a6e3] hover:bg-[#008cc0] text-white font-black text-sm uppercase px-4 py-3 transition-colors duration-200 cursor-pointer w-full"
+            <input
+              type="tel"
+              placeholder="+7 (999) 000-00-00"
+              className="px-4 py-3 bg-white text-gray-800 text-xs rounded focus:outline-none"
+            />
+            <input
+              type="email"
+              placeholder="E-mail"
+              className="px-4 py-3 bg-white text-gray-800 text-xs rounded focus:outline-none"
+            />
+            <button
+              type="submit"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white text-xs font-bold uppercase py-3 rounded transition"
             >
-              ОТПРАВИТЬ
+              Отправить
             </button>
           </form>
 
-          <p className="text-[10px] sm:text-xs text-gray-200 uppercase max-w-2xl mx-auto font-semibold leading-relaxed tracking-wider">
-            «НАЖИМАЯ НА КНОПКУ, ВЫ ДАЕТЕ СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ И СОГЛАШАЕТЕСЬ С ПОЛИТИКОЙ КОНФИДЕНЦИАЛЬНОСТИ»
+          <p className="text-[10px] text-gray-400 mt-4 max-w-xl mx-auto">
+            Нажимая кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-cyan-500 text-white py-10 px-4 text-xs">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 className="font-bold uppercase mb-3">Каталог товаров</h4>
+            <ul className="space-y-1 text-cyan-100">
+              <li>Кардиотренажеры</li>
+              <li>Силовые тренажеры</li>
+              <li>Свободные веса</li>
+              <li>Рамы/Стретчинг</li>
+              <li>Аксессуары</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold uppercase mb-3">Информация</h4>
+            <ul className="space-y-1 text-cyan-100">
+              <li>О бренде</li>
+              <li>Преимущества</li>
+              <li>Открыть клуб</li>
+              <li>Продукция</li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold uppercase mb-3">Контакты</h4>
+            <p className="text-cyan-100 mb-1">Отдел продаж: info@truefitness.ru</p>
+            <p className="text-cyan-100">+7 (495) 000-00-00</p>
+          </div>
+
+          <div>
+            <h4 className="font-bold uppercase mb-3">Подписаться на новости и акции</h4>
+            <div className="flex mb-4">
+              <input
+                type="email"
+                placeholder="E-mail"
+                className="px-3 py-2 text-gray-800 text-xs rounded-l w-full focus:outline-none"
+              />
+              <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-3 py-2 rounded-r">
+                ➤
+              </button>
+            </div>
+            <div className="flex space-x-3 text-lg">
+              <a href="#" className="hover:opacity-75">f</a>
+              <a href="#" className="hover:opacity-75">📷</a>
+              <a href="#" className="hover:opacity-75">▶</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   )
 }
 
